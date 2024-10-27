@@ -1,0 +1,997 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/anton/ontologies/2024/9/pattern"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/anton/ontologies/2024/9/pattern">
+    <Prefix name="" IRI="http://www.semanticweb.org/anton/ontologies/2024/9/pattern"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <DataProperty IRI="#Описание_паттерна_программирования"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Представление"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Простота_дополнения"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Фабричный_метод"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Id_назначения_паттерна"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Задача_программирования"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Назначение_паттерна"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Название_паттерна_программирования"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Защита_логики"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Повторное_использование_кода"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Разбиение_на_функции"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Модель"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Цитадель"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Id_задачи_программирования"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Декоратор"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Чистая_архитектура"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Управление_зависимостями"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Динамическое_создание_объектов"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Внешний_слой"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Защитный_барьер"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Название_назначения_паттерна"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Название_задачи_программирования"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Неизменяемое_ядро"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Модульность"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Адаптер"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Описание_назначения_паттерна"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Решает_задачу"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Компонент"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Паттерн_программирования"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Состоит_из"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Централизация"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Стратегия"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Внутренний_слой"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Id_паттерна_программирования"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Центральная_логика"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Интерфейс"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Контроллер"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Масштабируемость"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Описание_задачи_программирования"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Упрощение_тестирования"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Составляющая_паттерна"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Является_частью"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Составляющая_паттерна"/>
+        <NamedIndividual IRI="#Адаптер"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Составляющая_паттерна"/>
+        <NamedIndividual IRI="#Внешний_слой"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Составляющая_паттерна"/>
+        <NamedIndividual IRI="#Внутренний_слой"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Паттерн_программирования"/>
+        <NamedIndividual IRI="#Декоратор"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Назначение_паттерна"/>
+        <NamedIndividual IRI="#Динамическое_создание_объектов"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Назначение_паттерна"/>
+        <NamedIndividual IRI="#Защита_логики"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Составляющая_паттерна"/>
+        <NamedIndividual IRI="#Защитный_барьер"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Составляющая_паттерна"/>
+        <NamedIndividual IRI="#Интерфейс"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Составляющая_паттерна"/>
+        <NamedIndividual IRI="#Компонент"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Составляющая_паттерна"/>
+        <NamedIndividual IRI="#Контроллер"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Назначение_паттерна"/>
+        <NamedIndividual IRI="#Масштабируемость"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Составляющая_паттерна"/>
+        <NamedIndividual IRI="#Модель"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Паттерн_программирования"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Задача_программирования"/>
+        <NamedIndividual IRI="#Модульность"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Задача_программирования"/>
+        <NamedIndividual IRI="#Неизменяемое_ядро"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Задача_программирования"/>
+        <NamedIndividual IRI="#Повторное_использование_кода"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Составляющая_паттерна"/>
+        <NamedIndividual IRI="#Представление"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Задача_программирования"/>
+        <NamedIndividual IRI="#Простота_дополнения"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Задача_программирования"/>
+        <NamedIndividual IRI="#Разбиение_на_функции"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Паттерн_программирования"/>
+        <NamedIndividual IRI="#Стратегия"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Назначение_паттерна"/>
+        <NamedIndividual IRI="#Управление_зависимостями"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Назначение_паттерна"/>
+        <NamedIndividual IRI="#Упрощение_тестирования"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Паттерн_программирования"/>
+        <NamedIndividual IRI="#Фабричный_метод"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Назначение_паттерна"/>
+        <NamedIndividual IRI="#Централизация"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Составляющая_паттерна"/>
+        <NamedIndividual IRI="#Центральная_логика"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Паттерн_программирования"/>
+        <NamedIndividual IRI="#Цитадель"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Паттерн_программирования"/>
+        <NamedIndividual IRI="#Чистая_архитектура"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Является_частью"/>
+        <NamedIndividual IRI="#Адаптер"/>
+        <NamedIndividual IRI="#Цитадель"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Является_частью"/>
+        <NamedIndividual IRI="#Внешний_слой"/>
+        <NamedIndividual IRI="#Чистая_архитектура"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Является_частью"/>
+        <NamedIndividual IRI="#Внутренний_слой"/>
+        <NamedIndividual IRI="#Чистая_архитектура"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+        <NamedIndividual IRI="#Декоратор"/>
+        <NamedIndividual IRI="#Упрощение_тестирования"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Решает_задачу"/>
+        <NamedIndividual IRI="#Декоратор"/>
+        <NamedIndividual IRI="#Повторное_использование_кода"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <NamedIndividual IRI="#Декоратор"/>
+        <NamedIndividual IRI="#Интерфейс"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <NamedIndividual IRI="#Декоратор"/>
+        <NamedIndividual IRI="#Компонент"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Является_частью"/>
+        <NamedIndividual IRI="#Защитный_барьер"/>
+        <NamedIndividual IRI="#Стратегия"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Является_частью"/>
+        <NamedIndividual IRI="#Интерфейс"/>
+        <NamedIndividual IRI="#Стратегия"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Является_частью"/>
+        <NamedIndividual IRI="#Компонент"/>
+        <NamedIndividual IRI="#Фабричный_метод"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Является_частью"/>
+        <NamedIndividual IRI="#Контроллер"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Является_частью"/>
+        <NamedIndividual IRI="#Модель"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+        <NamedIndividual IRI="#Масштабируемость"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Решает_задачу"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+        <NamedIndividual IRI="#Разбиение_на_функции"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+        <NamedIndividual IRI="#Контроллер"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+        <NamedIndividual IRI="#Модель"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+        <NamedIndividual IRI="#Представление"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Является_частью"/>
+        <NamedIndividual IRI="#Представление"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+        <NamedIndividual IRI="#Стратегия"/>
+        <NamedIndividual IRI="#Упрощение_тестирования"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Решает_задачу"/>
+        <NamedIndividual IRI="#Стратегия"/>
+        <NamedIndividual IRI="#Разбиение_на_функции"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <NamedIndividual IRI="#Стратегия"/>
+        <NamedIndividual IRI="#Внутренний_слой"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <NamedIndividual IRI="#Стратегия"/>
+        <NamedIndividual IRI="#Интерфейс"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+        <NamedIndividual IRI="#Фабричный_метод"/>
+        <NamedIndividual IRI="#Динамическое_создание_объектов"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Решает_задачу"/>
+        <NamedIndividual IRI="#Фабричный_метод"/>
+        <NamedIndividual IRI="#Простота_дополнения"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <NamedIndividual IRI="#Фабричный_метод"/>
+        <NamedIndividual IRI="#Интерфейс"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Является_частью"/>
+        <NamedIndividual IRI="#Центральная_логика"/>
+        <NamedIndividual IRI="#Декоратор"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+        <NamedIndividual IRI="#Цитадель"/>
+        <NamedIndividual IRI="#Централизация"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Решает_задачу"/>
+        <NamedIndividual IRI="#Цитадель"/>
+        <NamedIndividual IRI="#Неизменяемое_ядро"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <NamedIndividual IRI="#Цитадель"/>
+        <NamedIndividual IRI="#Центральная_логика"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+        <NamedIndividual IRI="#Чистая_архитектура"/>
+        <NamedIndividual IRI="#Масштабируемость"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Решает_задачу"/>
+        <NamedIndividual IRI="#Чистая_архитектура"/>
+        <NamedIndividual IRI="#Модульность"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <NamedIndividual IRI="#Чистая_архитектура"/>
+        <NamedIndividual IRI="#Внешний_слой"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <NamedIndividual IRI="#Чистая_архитектура"/>
+        <NamedIndividual IRI="#Внутренний_слой"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Адаптер"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Адаптер"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Адаптер</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Адаптер"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Определяет интерфейс, который получает входные данные</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Внешний_слой"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Внешний_слой"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Внешний слой</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Внешний_слой"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Определяет слой, который получает входные данные</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Внутренний_слой"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Внутренний_слой"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Внутренний слой</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Внутренний_слой"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Определяет слой, который выполняет вычисления для полученных данных</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_паттерна_программирования"/>
+        <NamedIndividual IRI="#Декоратор"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_паттерна_программирования"/>
+        <NamedIndividual IRI="#Декоратор"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Декоратор</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_паттерна_программирования"/>
+        <NamedIndividual IRI="#Декоратор"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Динамическое изменение поведения функций</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_назначения_паттерна"/>
+        <NamedIndividual IRI="#Динамическое_создание_объектов"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_назначения_паттерна"/>
+        <NamedIndividual IRI="#Динамическое_создание_объектов"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Динамическое создание объектов</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_назначения_паттерна"/>
+        <NamedIndividual IRI="#Динамическое_создание_объектов"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Проявляется в создании новых объектов по ходу выполнения работы приложения</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_назначения_паттерна"/>
+        <NamedIndividual IRI="#Защита_логики"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_назначения_паттерна"/>
+        <NamedIndividual IRI="#Защита_логики"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Защита логики</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_назначения_паттерна"/>
+        <NamedIndividual IRI="#Защита_логики"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Отвечает за написание валидаторов, которые обеспечивают доступ к логике только проверенным данным</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Защитный_барьер"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Защитный_барьер"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Защитный барьер</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Защитный_барьер"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Определяет слой валидаторов и фильтров, которые обеспечивают прохождение только корректных данных</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Интерфейс"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Интерфейс"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Интерфейс</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Интерфейс"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Интерфейс используется для предоставления конкретного функционала</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Компонент"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Компонент"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Компонент</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Компонент"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Компонент - единица приложения</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Контроллер"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Контроллер"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Контроллер</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Контроллер"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Выполняет действия с данными пользователя</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_назначения_паттерна"/>
+        <NamedIndividual IRI="#Масштабируемость"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_назначения_паттерна"/>
+        <NamedIndividual IRI="#Масштабируемость"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Масштабируемость</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_назначения_паттерна"/>
+        <NamedIndividual IRI="#Масштабируемость"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Обеспечивает простоту увеличения функционала приложения</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Модель"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Модель"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Модель</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Модель"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Определяет структуру работы с конкретными данными</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_паттерна_программирования"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_паттерна_программирования"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Модель-представление-контроллер (MVC)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_паттерна_программирования"/>
+        <NamedIndividual IRI="#Модель_представление_контроллер"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Разделяет логику приложения на 3 части: модель (получает данные он контроллера), представление (получает данные от модели и выводит их пользователю), контроллер (обрабатывает действия пользователя)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_задачи_программирования"/>
+        <NamedIndividual IRI="#Модульность"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_задачи_программирования"/>
+        <NamedIndividual IRI="#Модульность"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Модульность</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_задачи_программирования"/>
+        <NamedIndividual IRI="#Модульность"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Проявляется в независимых блоках, каждый из которых выполняет свою задачу</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_задачи_программирования"/>
+        <NamedIndividual IRI="#Неизменяемое_ядро"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_задачи_программирования"/>
+        <NamedIndividual IRI="#Неизменяемое_ядро"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Неизменяемое ядро</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_задачи_программирования"/>
+        <NamedIndividual IRI="#Неизменяемое_ядро"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ядро приложения выполняет самые базовые функции и не подвергается модификации при расширении приложения</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_задачи_программирования"/>
+        <NamedIndividual IRI="#Повторное_использование_кода"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_задачи_программирования"/>
+        <NamedIndividual IRI="#Повторное_использование_кода"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Повторное использование кода</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_задачи_программирования"/>
+        <NamedIndividual IRI="#Повторное_использование_кода"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Отвечает за написание более гибкого кода, который можно переиспользовать</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Представление"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Представление"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Представление (вид)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Представление"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Получает данные и предоставляет их пользователю</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_задачи_программирования"/>
+        <NamedIndividual IRI="#Простота_дополнения"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_задачи_программирования"/>
+        <NamedIndividual IRI="#Простота_дополнения"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Простота дополнения</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_задачи_программирования"/>
+        <NamedIndividual IRI="#Простота_дополнения"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Проявляется в разбиении кода на малые части, благодаря чему просто создавать новые блоки кода</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_задачи_программирования"/>
+        <NamedIndividual IRI="#Разбиение_на_функции"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_задачи_программирования"/>
+        <NamedIndividual IRI="#Разбиение_на_функции"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Разбиение на функции</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_задачи_программирования"/>
+        <NamedIndividual IRI="#Разбиение_на_функции"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Проявляется в функциональном подходе к написанию приложения</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_паттерна_программирования"/>
+        <NamedIndividual IRI="#Стратегия"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_паттерна_программирования"/>
+        <NamedIndividual IRI="#Стратегия"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Стратегия</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_паттерна_программирования"/>
+        <NamedIndividual IRI="#Стратегия"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Определяет семейство схожих алгоритмов, инкапсулирует их и обеспечивает их взаимозаменяемость</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_назначения_паттерна"/>
+        <NamedIndividual IRI="#Управление_зависимостями"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_назначения_паттерна"/>
+        <NamedIndividual IRI="#Управление_зависимостями"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Управление зависимостями</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_назначения_паттерна"/>
+        <NamedIndividual IRI="#Управление_зависимостями"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Обеспечивает строгую иерархию в наследовании классов и модулей</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_назначения_паттерна"/>
+        <NamedIndividual IRI="#Упрощение_тестирования"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_назначения_паттерна"/>
+        <NamedIndividual IRI="#Упрощение_тестирования"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Управление тестированием</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_назначения_паттерна"/>
+        <NamedIndividual IRI="#Упрощение_тестирования"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Обеспечивает написание тест-кейсов, которые эффективно покрывают большую часть кода</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_паттерна_программирования"/>
+        <NamedIndividual IRI="#Фабричный_метод"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_паттерна_программирования"/>
+        <NamedIndividual IRI="#Фабричный_метод"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Фабричный метод</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_паттерна_программирования"/>
+        <NamedIndividual IRI="#Фабричный_метод"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Определяет интерфейс для создания объектов, которым пользуются подклассы</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_назначения_паттерна"/>
+        <NamedIndividual IRI="#Централизация"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_назначения_паттерна"/>
+        <NamedIndividual IRI="#Централизация"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Централизация</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_назначения_паттерна"/>
+        <NamedIndividual IRI="#Централизация"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Проявляется в создании ядра приложения, которое выполняет базовый функционал</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Центральная_логика"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Центральная_логика"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Центральная логика</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <NamedIndividual IRI="#Центральная_логика"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Главные вычислительные функции приложения, которые выполняют важные задачи</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_паттерна_программирования"/>
+        <NamedIndividual IRI="#Цитадель"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_паттерна_программирования"/>
+        <NamedIndividual IRI="#Цитадель"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Цитадель</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_паттерна_программирования"/>
+        <NamedIndividual IRI="#Цитадель"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Паттерн для защиты логики и централизации контроллеров</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Id_паттерна_программирования"/>
+        <NamedIndividual IRI="#Чистая_архитектура"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Название_паттерна_программирования"/>
+        <NamedIndividual IRI="#Чистая_архитектура"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Чистая архитектура</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Описание_паттерна_программирования"/>
+        <NamedIndividual IRI="#Чистая_архитектура"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Архитектурный паттерн для разделения слоёв системы и централизации контроллеров</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#Решает_задачу"/>
+    </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#Решает_задачу"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#Состоит_из"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#Является_частью"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#Решает_задачу"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#Состоит_из"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#Является_частью"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+        <Class IRI="#Паттерн_программирования"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Решает_задачу"/>
+        <Class IRI="#Паттерн_программирования"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <Class IRI="#Паттерн_программирования"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Является_частью"/>
+        <Class IRI="#Составляющая_паттерна"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Имеет_назначение"/>
+        <Class IRI="#Назначение_паттерна"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Решает_задачу"/>
+        <Class IRI="#Задача_программирования"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Состоит_из"/>
+        <Class IRI="#Составляющая_паттерна"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Является_частью"/>
+        <Class IRI="#Паттерн_программирования"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Id_задачи_программирования"/>
+        <Class IRI="#Задача_программирования"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Id_назначения_паттерна"/>
+        <Class IRI="#Назначение_паттерна"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Id_паттерна_программирования"/>
+        <Class IRI="#Паттерн_программирования"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <Class IRI="#Составляющая_паттерна"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Название_задачи_программирования"/>
+        <Class IRI="#Задача_программирования"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Название_назначения_паттерна"/>
+        <Class IRI="#Назначение_паттерна"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Название_паттерна_программирования"/>
+        <Class IRI="#Паттерн_программирования"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <Class IRI="#Составляющая_паттерна"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Описание_задачи_программирования"/>
+        <Class IRI="#Задача_программирования"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Описание_назначения_паттерна"/>
+        <Class IRI="#Назначение_паттерна"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Описание_паттерна_программирования"/>
+        <Class IRI="#Паттерн_программирования"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <Class IRI="#Составляющая_паттерна"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Id_задачи_программирования"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Id_назначения_паттерна"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Id_паттерна_программирования"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Id_составляющей_паттерна"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Название_задачи_программирования"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Название_назначения_паттерна"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Название_паттерна_программирования"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Название_составляющей_паттерна"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Описание_задачи_программирования"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Описание_назначения_паттерна"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Описание_паттерна_программирования"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Описание_составляющей_паттерна"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

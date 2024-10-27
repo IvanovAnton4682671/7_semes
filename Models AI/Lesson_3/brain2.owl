@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#"
+     xml:base="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:brain="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Имеет_тип -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Имеет_тип">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_нейронов"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_отправитель -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_отправитель">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_получатель -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_получатель">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Структура_мозга -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Структура_мозга">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Заболевание"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_синапса -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_синапса">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_синапсов"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Название -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Название">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Заболевание"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_нейронов"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_синапсов"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Описание -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Описание">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Заболевание"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_нейронов"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_синапсов"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Заболевание -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Заболевание"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_нейронов -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_нейронов"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_синапсов -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_синапсов"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Ассоциативный -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Ассоциативный">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_нейронов"/>
+        <Название>Ассоциативный</Название>
+        <Описание>Обмениваются сигналами друг с другом, обрабатывая информацию от афферентных и после обработки переправляя ее на эфферентные</Описание>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Болезнь_Альцгеймера -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Болезнь_Альцгеймера">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Заболевание"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Гиппокамп"/>
+        <Название>Болезнь Альцгеймера</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Височная_доля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Височная_доля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <Название>Височная доля</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Гиппокамп -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Гиппокамп">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <Название>Гиппокамп</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Движение_мышц -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Движение_мышц">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозжечок"/>
+        <Название>Движение мышц</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Дыхание -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Дыхание">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Ствол_мозга"/>
+        <Название>Дыхание</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Затылочная_доля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Затылочная_доля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <Описание>Затылочная доля</Описание>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Когнитивная -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Когнитивная">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Кора"/>
+        <Название>Когнитивная</Название>
+        <Описание>Cпособность понимать, познавать, изучать, воспринимать и перерабатывать (запоминать, передавать, использовать) внешнюю информацию</Описание>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Координация -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Координация">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозжечок"/>
+        <Название>Координация</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Кора -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Кора">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <Название>Кора</Название>
+        <Описание>Это часть мозга, ответственная за когнитивные способности</Описание>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Лобная_доля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Лобная_доля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <Название>Лобная доля</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Менингит -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Менингит">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Заболевание"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Кора"/>
+        <Название>Менингит</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Миндалевидное_тело -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Миндалевидное_тело">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <Название>Миндалевидное тело</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозжечок -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозжечок">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <Название>Мозжечок</Название>
+        <Описание>Отдел головного мозга позвоночных, отвечающий за координацию движений</Описание>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Моторный -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Моторный">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_нейронов"/>
+        <Название>Моторный</Название>
+        <Описание>Передают сигналы мышцам и железам</Описание>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон"/>
+        <Имеет_тип rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Сенсорный"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Серое_вещество"/>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон"/>
+        <Имеет_тип rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Моторный"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Серое_вещество"/>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон"/>
+        <Имеет_тип rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Моторный"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Серое_вещество"/>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Ориентация_в_пространстве -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Ориентация_в_пространстве">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Теменная_доля"/>
+        <Название>Ориентация в пространстве</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Память -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Память">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Височная_доля"/>
+        <Название>Память</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Паркинсона -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Паркинсона">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Заболевание"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Кора"/>
+        <Название>Паркинсона</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Сенсорный -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Сенсорный">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_нейронов"/>
+        <Название>Сенсорный</Название>
+        <Описание>Получают сигналы от органов чувств</Описание>
+        <Описание>Сенсорный</Описание>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Сердцебиение -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Сердцебиение">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Ствол_мозга"/>
+        <Название>Сердцебиение</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Серое_вещество -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Серое_вещество">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <Название>Серове вещество</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс"/>
+        <Нейрон_отправитель rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_1"/>
+        <Нейрон_получатель rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_2"/>
+        <Тип_синапса rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Химический"/>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Синапс"/>
+        <Нейрон_отправитель rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_2"/>
+        <Нейрон_получатель rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Нейрон_3"/>
+        <Тип_синапса rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Электрический"/>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Слух -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Слух">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Височная_доля"/>
+        <Название>Слух</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Способности_к_языкам -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Способности_к_языкам">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Височная_доля"/>
+        <Название>Способности к языкам</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Ствол_мозга -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Ствол_мозга">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <Название>Ствол мозга</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тактильная_чувствительность -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тактильная_чувствительность">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Функция_мозга"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Теменная_доля"/>
+        <Название>Тактильная чувствительность</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Теменная_доля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Теменная_доля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Мозговая_структура"/>
+        <Название>Теменная доля</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Химический -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Химический">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_синапсов"/>
+        <Название>Химический</Название>
+        <Описание>У данного типа синапса роль посредника (медиатора) выполняет химическое вещество</Описание>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Электрический -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Электрический">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_синапсов"/>
+        <Название>Электрический</Название>
+        <Описание>Электрические синапсы характеризуются высокой скоростью передачи информации</Описание>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Эпилепсия -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Эпилепсия">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Заболевание"/>
+        <Структура_мозга rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Лобная_доля"/>
+        <Название>Эпилепсия</Название>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Электро-химический_(смешанный) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Электро-химический_(смешанный)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dasyy/ontologies/2024/9/brain#Тип_синапсов"/>
+        <Название>Электро-химический</Название>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
