@@ -1,0 +1,265 @@
+
+import tkinter as tk
+from typing import Tuple, List
+import sys
+
+################################################################################
+#создание основного окна
+
+root = tk.Tk()
+root.title("Эмулятор газорезки МНЛЗ")
+root.geometry("800x600")
+root.resizable(False, False)
+
+################################################################################
+#создание канваса
+
+canvas = tk.Canvas(root, width=800, height=300, bg="white")
+canvas.place(x=0, y=300)
+
+################################################################################
+#создание всех объектов
+
+#жёлоб
+chute = canvas.create_rectangle(0, 125, 800, 175, fill="#adb5bd", outline="#000814")
+
+#система охлаждения
+cooling_system = canvas.create_rectangle(0, 75, 100, 225, fill="#495057", outline="#000814")
+
+#заготовка
+workpiece = canvas.create_rectangle(100, 140, 200, 160, fill="#ffbe0B", outline="#000814")
+
+#лампа
+lamp = canvas.create_oval(700, 10, 730, 40, fill="", outline="#000814")
+
+#статус рольганга
+rolgang_text = canvas.create_text(550, 25, text="Разрешение для рольганга: нет", font=("Times New Roman", 14))
+
+#тележка с захватом и резаком
+def create_cart() -> Tuple[List[int], List[int], List[int]]:
+    """
+    Метод, который создаёт и объединяет в группы основные объекты (тележка, резак и захват)
+
+    Args:
+        None
+
+    Returns:
+        cart (List[int]): Список объектов тележки (+ клапан и захват)
+        gripping_valve (List[int]): Список объектов клапана захвата
+        cutter (List[int]): Список объектов резак
+    """
+    cart = canvas.create_rectangle(100, 180, 200, 210, fill="#343a40", outline="#000814")
+    cart_wheel_1 = canvas.create_oval(110, 200, 130, 220, fill="#8d0801", outline="#000814")
+    cart_wheel_2 = canvas.create_oval(170, 200, 190, 220, fill="#8d0801", outline="#000814")
+    cath_rail = canvas.create_rectangle(180, 180, 181, 110, fill="#343a40", outline="#000814")
+    catch_foot_down = canvas.create_rectangle(180, 170, 165, 170, fill="#343a40", outline="#000814")
+    catch_foot_up = canvas.create_rectangle(180, 130, 165, 130, fill="#343a40", outline="#000814")
+    cutter_rail = canvas.create_rectangle(120, 180, 121, 110, fill="#343a40", outline="#000814")
+    cutter_body = canvas.create_rectangle(110, 175, 120, 160, fill="#d62828", outline="#000814")
+    cutter_nozzle = canvas.create_rectangle(110, 167, 100, 167, fill="#343a40", outline="#000814")
+
+    return [cart, cart_wheel_1, cart_wheel_2, cath_rail, catch_foot_down, catch_foot_up, cutter_rail, cutter_body, cutter_nozzle], [catch_foot_down, catch_foot_up], [cutter_body, cutter_nozzle]
+cart, valve, cutter = create_cart()
+
+################################################################################
+#функции анимации объектов
+
+#включение/выключение лампы
+def lamp_mode(status: bool) -> None:
+    """
+    Функция, которая заполняет лампу цветом
+
+    Args:
+        status (bool): Режим работы лампы (True - включить, False - выключить)
+
+    Returns:
+        None
+    """
+    if status:
+        canvas.itemconfig(lamp, fill="#fca311")
+    else:
+        canvas.itemconfig(lamp, fill="")
+
+#печать разрешения рольганга
+def rolgang_mode(status: bool) -> None:
+    """
+    Функция, которая печатает статус получения рольгангом разрешения
+
+    Args:
+        status (bool): Статус получения рольгангом разрешения (True - есть, False - нет)
+
+    Returns:
+        None
+    """
+    if status:
+        canvas.itemconfig(rolgang_text, text="Разрешение для рольганга: да")
+    else:
+        canvas.itemconfig(rolgang_text, text="Разрешение для рольганга: нет")
+
+#захват/отпускание заготовки
+def valve_mode(status: bool) -> None:
+    """
+    Функция, которая выполняет анимацию захвата/отпускания заготовки
+
+    Args:
+        status (bool): Режим работы клапана (True - захват, False - отпускание)
+
+    Returns:
+        None
+    """
+    valve_0_coords = canvas.coords(valve[0])
+    valve_1_coords = canvas.coords(valve[1])
+
+    if status and valve_0_coords == [165.0, 170.0, 180.0, 170.0] and valve_1_coords == [165.0, 130.0, 180.0, 130.0]:
+        canvas.move(valve[0], 0, -10)
+        canvas.move(valve[1], 0, 10)
+    elif not status and valve_0_coords == [165.0, 160.0, 180.0, 160.0] and valve_1_coords == [165.0, 140.0, 180.0, 140.0]:
+        canvas.move(valve[0], 0, 10)
+        canvas.move(valve[1], 0, -10)
+
+#движение тележки
+def cart_move(canvas, status: bool, dx: int, delay: int, on_complete: callable) -> None:
+    """
+    Функция, которая выполняет плавную анимацию перемещения тележки
+
+    Args:
+        canvas: Главный canvas, на котором изображены все объекты
+        status (bool): Сторона перемещения тележки (True - вправо, False - влево)
+        dx (int): Величина перемещения по оси X
+        delay (int): Величина задержки (в мс) между кадрами перерисовки
+        on_complete (callable): Функция, вызываемая после завершения текущего цикла движения
+
+    Returns:
+        None
+    """
+    def anim_step() -> None:
+        """
+        Вспомогательная функция, которая выполняет расчёт позиций объектов для кадра анимации
+
+        Args:
+            None
+
+        Returns:
+            None
+        """
+        cart_coords = canvas.coords(cart[0])
+
+        if status and cart_coords[2] >= 800.0:
+            on_complete(False)
+            return
+        elif not status and cart_coords[0] <= 100.0:
+            on_complete(True)
+            return
+
+        for obj in cart:
+            canvas.move(obj, dx if status else -dx, 0)
+
+        canvas.after(delay, anim_step)
+
+    anim_step()
+
+#движение резака
+def cutter_move(canvas, status: bool, duration: int, delay: int) -> None:
+    """
+    Функция, которая выполняет плавное перемещение резака к конечной позиции за указанную длительность
+
+    Args:
+        canvas: Главный canvas, на котором изображены все объекты
+        status (bool): Направление перемещения резака (True - вверх, False - вниз)
+        duration (int): Длительность процесса резки в секундах
+        delay (int): Величина задержки (в мс) между кадрами перерисовки
+
+    Returns:
+        None
+    """
+    if status:
+        target_coords_cutter = [110, 140, 120, 125]
+        target_coords_nozzle = [110, 133, 100, 133]
+        start_coords = canvas.coords(cutter[0])
+        iterations = (duration * 1000) // delay
+        dy = (target_coords_cutter[1] - start_coords[1]) / iterations
+        dy -= 0.13 #доводка скорости
+    else:
+        target_coords_cutter = [110, 175, 120, 160]
+        target_coords_nozzle = [110, 167, 100, 167]
+        start_coords = canvas.coords(cutter[0])
+        iterations = (duration * 1000) // delay
+        dy = (target_coords_cutter[1] - start_coords[1]) / iterations
+        dy += 0.13 #доводка скорости
+
+    def anim_step(current_iteration: int) -> None:
+        """
+        Вспомогательная функция, выполняющая один шаг перемещения резака
+
+        Args:
+            current_iteration (int): Текущая итерация движения
+
+        Returns:
+            None
+        """
+        if current_iteration >= iterations:
+            #canvas.coords(cutter[0], *target_coords_cutter)
+            #canvas.coords(cutter[1], *target_coords_nozzle)
+            return
+
+        for obj in cutter:
+            canvas.move(obj, 0, dy)
+
+        canvas.after(delay, lambda: anim_step(current_iteration + 1))
+
+    anim_step(0)
+
+################################################################################
+
+#запуск работы объекта
+def start_object(dx: int, delay: int) -> None:
+    """
+    Функция, которая запускает цикл работы объекта
+
+    Args:
+        dx (int): Величина перемещения по оси X
+        delay (int): Величина задержки (в мс) между кадрами перерисовки
+
+    Returns:
+        None
+    """
+    def cart_move_cycle(direction: bool) -> None:
+        """
+        Вспомогательная функция, которая следит за циклом движения тележки
+
+        Args:
+            direction (bool): Направление движения тележки (True - вправо, False - влево)
+
+        Returns:
+            None
+        """
+        cart_move(canvas, direction, dx, delay, on_complete=cart_move_cycle)
+
+    button_start.config(state=tk.DISABLED)
+    cart_move_cycle(True)
+
+################################################################################
+
+button_start = tk.Button(root, text="Запустить объект", font=("Times New Roman", 14), command=lambda: start_object(5, 50))
+button_start.place(x=50, y=50)
+
+button_end = tk.Button(root, text="Аварийная кнопка", font=("Times New Roman", 14), command=sys.exit)
+button_end.place(x=50, y=100)
+
+################################################################################
+
+root.mainloop()
+
+
+
+
+
+
+
+
+elif not is_cutting and not cutter_finished and not cart_finished:
+            is_cutting = not is_cutting
+            cutter_finished = True
+            cart_finished = True
+            cutter_move(canvas, is_cutting, duration, delay, on_complete=on_cutter_complete)
+            cart_move(canvas, is_cutting, dx, delay, on_complete=on_cart_complete)
