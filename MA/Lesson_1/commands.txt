@@ -1,0 +1,7 @@
+docker version
+docker pull docker/getting-started
+docker run -d -p 80:80 docker/getting-started
+docker stop [имя_контейнера или ID]
+docker pull nginx:stable-alpine3.20-perl
+[запускаем nginx с указанием имени и порта]
+docker stop Ivanov_name

@@ -1,0 +1,7 @@
+kubectl apply -f deploy2.yaml
+kubectl apply -f .\serv1.yaml
+kubectl get service
+kubectl get deploy
+kubectl get pods
+kubectl exec -it kuber-5656d8fcf5-8ln72 -- /bin/sh
+curl http://127.0.0.1:8000

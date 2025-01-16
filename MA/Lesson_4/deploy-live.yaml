@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ubuntu
+  labels:
+    app: ubuntu
+spec:
+  replicas: 1
+  selector:
+    mathLabels:
+      app: ubuntu
+  template:
+    metadata:
+      labels:
+        app: ubuntu
+    spec:
+      containers:
+        - name: ubuntu
+          image: ubuntu
+          args:
+            - /bin/sh
+            - -c
+            - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
+            livenessProbe:
+              exec:
+                command:
+                  - cat
+                  - /tmp/healthy
+              initialDelaySeconds: 5
+              periodSeconds: 5
+              timeoutSeconds: 1
+              successThreshold: 1
+              failureThreshold: 3

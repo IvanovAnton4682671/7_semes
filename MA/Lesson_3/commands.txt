@@ -1,0 +1,15 @@
+kubectl cluster-info
+kubectl create namespace lesson-3
+kubectl get namespaces
+kubectl config set-context --current --namespace=lesson-3
+kubectl get pod
+kubectl apply -f .\pod1.yaml
+kubectl get pods
+kubectl port-forward hello 5555:80
+kubectl delete pod hello
+kubectl delete pod app-2
+kubectl apply -f deploy1.yaml
+kubectl get deploy
+kubectl get pods
+kubectl port-forward my-deploy-6c46db9c6c-tlxt4 5555:80
+kubectl delete -f deploy1.yaml --force --grace-period=0

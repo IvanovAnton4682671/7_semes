@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-multi
+  labels:
+    app: my-k8s-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: cia
+  template:
+    metadata:
+      labels:
+        project: cia
+    spec:
+      containers:
+        - name: my-web
+          image: adv4000/k8sphp:latest
+          ports:
+            - containerPort: 80 #port on Pod
+
+        - name: not-my-web
+          image: tomcat:8.5.38
+          ports:
+            - containerPort: 8080 #port on Pod
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: multi-service
+  labels:
+    env: prod
+    owner: user
+spec:
+  type: NodePort
+  selector:
+    project: cia
+  ports:
+    - name: my-web-app-listener
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30001
+    - name: not-my-web-app-listener
+      protocol: TCP
+      port: 8888
+      targetPort: 8888
+      nodePort: 30002

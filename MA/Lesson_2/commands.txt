@@ -1,0 +1,6 @@
+docker build -t my-hello .
+docker images
+docker run my-hello
+docker build -t my-flask .
+docker images
+docker run -d -p 8001:5000 my-flask
